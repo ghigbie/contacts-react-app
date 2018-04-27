@@ -18,7 +18,7 @@ class ListComponent extends Component{
                             <p>{contact.handle}</p>
                         </div>
                     </li>
-                ))}s
+                ))}
             </ol>
         );
     }
