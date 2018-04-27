@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 const ListComponent = (props) =>{
         return(
             <ol className="contact-list">
-                {this.props.contacts.map((contact) => (
+                {props.contacts.map((contact) => (
                     <li key={contact.id}
                         className="contact-list-item">
                         <div className="contact-avatar"
@@ -17,7 +17,7 @@ const ListComponent = (props) =>{
                             <p>{contact.handle}</p>
                         </div>
                         <button className="contact-remove"
-                                onClick={() => this.props.onDeleteContact}>Remove</button>
+                                onClick={() => props.onDeleteContact}>Remove</button>
                     </li>
                 ))}
             </ol>
