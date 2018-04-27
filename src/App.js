@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import ListContacts from './Components/ListContacts';
-import contacts from './services/dataService';
+import contactsData from './services/dataService';
 
 class App extends Component {
   
   state={
-    contacts: contacts
+    contacts: contactsData
   }
   
   removeContact = (contact) => {
-    this.setState((prevState) => {contacts: prevState.contacts.filter((c) => c.id !== contact.id)});
+    this.setState((prevState) => ({contacts: prevState.contacts.filter((c) => c.id !== contact.id)}));
   }
   
   render() {

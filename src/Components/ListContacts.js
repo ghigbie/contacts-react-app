@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
 const ListComponent = (props) =>{
@@ -17,7 +17,7 @@ const ListComponent = (props) =>{
                             <p>{contact.handle}</p>
                         </div>
                         <button className="contact-remove"
-                                onClick={() => props.onDeleteContact}>Remove</button>
+                                onClick={() => props.onDeleteContact(contact)}>Remove</button>
                     </li>
                 ))}
             </ol>
