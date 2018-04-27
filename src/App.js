@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ListContacts from './Components/ListContacts';
 import contacts from './services/dataService';
 
 class App extends Component {
