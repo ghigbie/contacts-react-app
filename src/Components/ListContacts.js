@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 
 
-class ListComponent extends Component{
-    render(){
+const ListComponent = (props) =>{
         return(
             <ol className="contact-list">
                 {this.props.contacts.map((contact) => (
@@ -17,12 +16,12 @@ class ListComponent extends Component{
                             <p>{contact.name}</p>
                             <p>{contact.handle}</p>
                         </div>
-                        <button className="contact-remove">Remove</button>
+                        <button className="contact-remove"
+                                onClick={() => this.props.onDeleteContact}>Remove</button>
                     </li>
                 ))}
             </ol>
         );
-    }
-}
+};
 
 export default ListComponent;
