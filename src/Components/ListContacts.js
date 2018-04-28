@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-
-const ListComponent = (props) =>{
+const ListContacts = (props) =>{
         return(
             <ol className="contact-list">
                 {props.contacts.map((contact) => (
@@ -24,4 +24,8 @@ const ListComponent = (props) =>{
         );
 };
 
-export default ListComponent;
+ListContacts.PropTypes = {
+    
+}
+
+export default ListContacts;
