@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-const ListContacts = (props) =>{
+class ListContacts extends Component{
+    
+    
+    render(){
         return(
             <ol className="contact-list">
-                {props.contacts.map((contact) => (
+                {this.props.contacts.map((contact) => (
                     <li key={contact.id}
                         className="contact-list-item">
                         <div className="contact-avatar"
@@ -17,11 +20,12 @@ const ListContacts = (props) =>{
                             <p>{contact.handle}</p>
                         </div>
                         <button className="contact-remove"
-                                onClick={() => props.onDeleteContact(contact)}>Remove</button>
+                                onClick={() => this.props.onDeleteContact(contact)}>Remove</button>
                     </li>
                 ))}
             </ol>
         );
+    }
 };
 
 ListContacts.PropTypes = {
