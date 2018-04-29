@@ -4,14 +4,15 @@ import PropTypes from 'prop-types';
 class ListContacts extends Component{
     static propTypes = {
         contacts: PropTypes.array.isRequired,
-        onDeleteContacts: PropTypes.func.isRequired
+        onDeleteContact: PropTypes.func.isRequired
     }
     
     state = {
-        query: ""
+        query: ''
     }
     
     updateQuery = (query) => {
+        console.log('updateQuery called');
         this.setState(() => ({query: query.trim()}));
     }
     
