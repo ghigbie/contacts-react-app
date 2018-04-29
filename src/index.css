@@ -185,4 +185,5 @@ body, .app {
   vertical-align: middle;
   cursor: pointer;
   outline: none;
+  float: right;
 }

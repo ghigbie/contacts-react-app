@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import ListContacts from './Components/ListContacts';
-import contactsData from './services/dataService';
+//import contactsData from './services/dataService';
+import * as ContactsAPI from './utils/ContactsAPI';
 
 class App extends Component {
   
   state={
-    contacts: contactsData
+    contacts: []
+  }
+  
+  componentDidMount(){
+    ContactsAPI.getAll()
+      .then((contacts) => {
+        this.setState(() => ({contacts }));
+      });
   }
   
   removeContact = (contact) => {
