@@ -20,6 +20,10 @@ class ListContacts extends Component{
         const { query } = this.state;
         const { contacts, onDeleteContact } = this.props
         
+        const showingContacts = query === '' ? contacts : contacts.filter((c) =>{
+           c.name.toLowerCase().includes(query.toLowerCase()); 
+        });
+        
         return(
             <div className="list-contacts">
                 <div className="list-contacts-top">
@@ -30,7 +34,7 @@ class ListContacts extends Component{
                            onChange={(event) => this.updateQuery(event.target.value)}/>
                 </div>
                 <ol className="contact-list">
-                    {this.props.contacts.map((contact) => (
+                    {showingContacts.map((contact) => (
                         <li key={contact.id}
                             className="contact-list-item">
                             <div className="contact-avatar"
