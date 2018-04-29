@@ -16,7 +16,7 @@ class ListContacts extends Component{
         this.setState(() => ({query: query.trim()}));
     }
     
-    clearQuery = () => this.setState(() => ({query: ''}));
+    clearQuery = () => this.updateQuery('');
     
     render(){
         const { query } = this.state;
