@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import * as ContactsAPI from './utils/ContactsAPI';
 
 class ListContacts extends Component{
     static propTypes = {
