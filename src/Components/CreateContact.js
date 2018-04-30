@@ -12,10 +12,10 @@ class CreateContact extends Component{
                 </Link>
             
                 <form className="create-contact-form">
-                    <ImageImport className="create-contact-avatar-imput"
+                    <ImageImport className="create-contact-avatar-input"
                                  name="avatarURL"
                                  maxHeight={64}/>
-                    <div className="create-contact-detail">
+                    <div className="create-contact-details">
                         <input type="text" name="name" placeholder="Name"/>
                         <input type="text" name="handle" placeholder="Handle"/>
                         <button>Add Contact</button>
