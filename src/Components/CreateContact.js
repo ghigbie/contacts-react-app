@@ -7,6 +7,7 @@ class CreateContact extends Component{
     handleSubmit = (e) =>{
         e.preventDefault();
         const values = serializeForm(e.target, {hash: true});
+        console.log('values', values);
     }
     
     render(){
@@ -25,7 +26,7 @@ class CreateContact extends Component{
                     <div className="create-contact-details">
                         <input type="text" name="name" placeholder="Name"/>
                         <input type="text" name="handle" placeholder="Handle"/>
-                        <button>Add Contact</button>
+                        <button type="submit" >Add Contact</button>
                     </div>
                 </form>
             </div>
