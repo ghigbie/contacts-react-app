@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import ImageImports from './ImageImports';
+import ImageImport from './ImageImport';
 
 class CreateContact extends Component{
     render(){
