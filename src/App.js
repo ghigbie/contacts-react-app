@@ -8,8 +8,7 @@ import * as ContactsAPI from './utils/ContactsAPI';
 class App extends Component {
   
   state={
-    contacts: [],
-    screen: 'list'
+    contacts: []
   }
   
   componentDidMount(){
@@ -29,10 +28,7 @@ class App extends Component {
       <div className="App">
         <Route exact path="/" render={() => (
           <ListContacts contacts={this.state.contacts} 
-                        onDeleteContact={this.removeContact}
-                        onNavigate={() => {
-                          this.setState(() => ({screen: 'create'}));
-                        }}/>)}/>
+                        onDeleteContact={this.removeContact}/>)}/>
                         
         <Route path="/create" render={() => (
           <CreateContact />)} />
