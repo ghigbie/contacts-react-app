@@ -4,7 +4,7 @@ class CreateContact extends Component{
     render(){
         return(
             <div>
-                <h3>Create Contact</h3>
+              
             </div>
         );
     }
