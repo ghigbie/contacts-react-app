@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ImageImport from './ImageImport';
+import serializeForm from 'form-serialize';
 
 class CreateContact extends Component{
+    handleSubmit = (e) =>{
+        e.preventDefault();
+    }
+    
     render(){
         return(
             <div>
@@ -11,7 +16,8 @@ class CreateContact extends Component{
                     Close
                 </Link>
             
-                <form className="create-contact-form">
+                <form onSubmit={this.handleSubmit}
+                      className="create-contact-form">
                     <ImageImport className="create-contact-avatar-input"
                                  name="avatarURL"
                                  maxHeight={64}/>
