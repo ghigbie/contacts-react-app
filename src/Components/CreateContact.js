@@ -11,6 +11,11 @@ class CreateContact extends Component{
                     Close
                 </Link>
             
+                <form className="create-contact-form">
+                    <ImageImport className="create-contact-avatar-imput"
+                                 name="avatarURL"
+                                 maxHeight={64}/>
+                </form>
             </div>
         );
     }
