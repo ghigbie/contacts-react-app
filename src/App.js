@@ -40,7 +40,9 @@ class App extends Component {
                         onDeleteContact={this.removeContact}/>)}/>
                         
         <Route path="/create" render={() => (
-          <CreateContact />)} />
+          <CreateContact onCreateContact={(contact) => {
+            this.createContact(contact);}}/>
+        )}/>
       </div>
     );
   }
