@@ -13,7 +13,6 @@ class ListContacts extends Component{
     }
     
     updateQuery = (query) => {
-        console.log('updateQuery called');
         this.setState(() => ({query: query.trim()}));
     }
     
